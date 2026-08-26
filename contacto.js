@@ -17,19 +17,19 @@ formulario.addEventListener("submit", function(e){
     const btnSubmit = formulario.querySelector('button[type="submit"]');
     const textoOriginal = btnSubmit.innerText;
     btnSubmit.innerText = "Enviando...";
-    
-    try {
-        emailjs.sendForm('service_icx691s', 'template_nxry41y', formulario)
-        .then(function(){
+    emailjs.sendForm('service_icx691s', 'template_nxry41y', '#form-contacto', 'jFlhP1c0DrcPu9SMP')
+    .then(
+        function(response) {
             alert("¡Correo enviado con éxito!");
             formulario.reset();
             btnSubmit.innerText = textoOriginal;
-        }, function(error){
-            alert("Ocurrió un error en EmailJS: " + JSON.stringify(error));
+        }, 
+        function(error) {
+            alert("Error de EmailJS: " + (error.text || error.message || JSON.stringify(error)));
             btnSubmit.innerText = textoOriginal;
-        });
-    } catch(err) {
-        alert("Fallo en el sistema: " + err.message);
+        }
+    ).catch(function(err) {
+        alert("Fallo grave en el sistema: " + err.message);
         btnSubmit.innerText = textoOriginal;
-    }
+    });
 });
