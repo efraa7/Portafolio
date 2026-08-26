@@ -1,0 +1,38 @@
+const btnInicio = document.getElementById("btn-inicio");
+const btnCerrar = document.getElementById("btn-cerrar");
+
+btnInicio.addEventListener("click", function(){
+    window.location.href= "index.html";
+});
+
+btnCerrar.addEventListener("click", function(){
+    window.history.back()
+});
+
+const formulario = document.getElementById("form-contacto");
+
+formulario.addEventListener("submit", function(e){
+    e.preventDefault();
+    
+    const btnSubmit = formulario.querySelector('button[type="submit"]');
+    const textoOriginal = btnSubmit.innerText;
+    btnSubmit.innerText = "Enviando...";
+    
+    // Le pasamos el ID del formulario como texto y añadimos tu Public Key al final
+    emailjs.sendForm('service_icx691s', 'template_mkcns6d', '#form-contacto', 'jFlhP1c0DrcPu9SMP')
+    .then(
+        function(response) {
+            alert("¡Correo enviado con éxito!");
+            formulario.reset();
+            btnSubmit.innerText = textoOriginal;
+        }, 
+        function(error) {
+            // Ahora si falla, te mostrará el mensaje exacto que devuelve el servidor
+            alert("Error de EmailJS: " + (error.text || error.message || JSON.stringify(error)));
+            btnSubmit.innerText = textoOriginal;
+        }
+    ).catch(function(err) {
+        alert("Fallo grave en el sistema: " + err.message);
+        btnSubmit.innerText = textoOriginal;
+    });
+});
