@@ -16,7 +16,7 @@ formulario.addEventListener("submit", function(e){
     const btnSubmit = formulario.querySelector('button[type="submit"]');
     const textoOriginal = btnSubmit.innerText;
     btnSubmit.innerText = "Enviando...";
-    emailjs.sendForm('service_li1gfs1', 'template_nxry41y', '#form-contacto').then(function(){
+    emailjs.sendForm('service_icx691s', 'template_nxry41y', '#form-contacto').then(function(){
         alert("¡Correo enviado con éxito!");
         formulario.reset();
         btnSubmit.innerText = textoOriginal;
