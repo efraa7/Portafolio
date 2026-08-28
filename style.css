@@ -296,7 +296,7 @@ section {
     padding: 0;
     overflow: hidden;
     position: relative;
-    min-height: 280px;
+
 }
 
 .contenedor-foto-hover{
@@ -354,7 +354,6 @@ section {
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    /*transition: all 0.3s ease;*/
     font-family: inherit;
 }
 
@@ -538,4 +537,89 @@ section:not(:last-of-type) {
     border-bottom: 25px solid #1B2CC1;
     padding-bottom: 40px;
     margin-bottom: 40px;
+}
+
+/*seccion responsive*/
+
+@media (max-width: 768px) {
+    .cabeza-contenedor-principal {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .cabeza-textos {
+        text-align: center;
+    }
+
+    .menu-principal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu-principal li a {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .contenedor-dos-columnas {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .contenedor-habilidades {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .contenedor-anios {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .materia-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    .materia-estado {
+        position: static;
+        opacity: 1;
+        transform: none;
+        width: auto;
+        height: auto;
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+    }
+
+    .materia-item:hover .materia-nombre {
+        opacity: 1;
+        transform: none;
+    }
+
+    .contenedor-proyecto{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .tarjeta-fotos-proyecto{
+        height: 500px;
+    }
+    
+    .formulario-contacto {
+        grid-template-columns: 1fr;
+    }
+    
+    .campo-completo {
+        grid-column: auto;
+    }
 }
