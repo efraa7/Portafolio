@@ -1,6 +1,6 @@
 body{
-    background-color: #0A2947;
-    color: #F3E4C9;
+    background-color: #091540;
+    color: #ABD2FA;
     font-family: arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,9 +9,10 @@ body{
 nav{
     position: sticky;
     top: 0;
-    background-color: #0A2947;
+    background-color: #091540;
     z-index: 1000;
     padding: 15px 0;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6);
 }
 
 .menu-principal{
@@ -25,26 +26,25 @@ nav{
 .menu-principal li a{
     display: inline-block;
     text-decoration: none;
-    color: #F3E4C9;
+    color: #ABD2FA;
     padding: 10px 20px;
-    border: 2px solid #8B5E3C;
+    border: 2px solid #1B2CC1;
     border-radius: 20px;
     font-weight: bold;
-    transition: all 0.3s ease;
 }
 
-.menu-principal li a:hover{
-    background-color:#8B5E3C;
-    color:#0A2947;
+/*.menu-principal li a:hover{
+    background-color:#1B2CC1;
+    color:#091540;
     transform: translateY(-4px);
 }
 
 .menu-principal li a:active{
     transform: translateY(2px);
-}
+}*/
 
 section {
-    scroll-margin-top: 80px; 
+    scroll-margin-top: 100px; 
 }
 
 .seccion-inicio{
@@ -55,12 +55,25 @@ section {
     padding: 60px 20px;
 }
 
+.cabeza-contenedor-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.cabeza-textos {
+    text-align: left;
+}
+
 .foto-perfil{
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #8B5E3C;
+    border: 4px solid #1B2CC1;
     margin-bottom: 20px;
 }
 
@@ -84,8 +97,8 @@ section {
 }
 
 .tarjeta{
-    background-color:#0A2947;
-    border: 2px solid #8B5E3C;
+    background-color:#091540;
+    border: 2px solid #1B2CC1;
     border-radius: 15px;
     padding: 30px;
     display: flex;
@@ -122,8 +135,8 @@ section {
 }
 
 .caja-habilidad{
-    background-color:#0A2947;
-    border: 1px solid #8B5E3C;
+    background-color:#091540;
+    border: 1px solid #1B2CC1;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 6px 6px 6px 15px rgba(0, 0, 0, 0.5);
@@ -133,14 +146,14 @@ section {
 }
 
 .caja-habilidad:hover{
-    background-color: #11385f;
-    border-color: #F3E4C9;
+    background-color: #7692FF;
+    border-color: #ABD2FA;
     transform: translateY(-4px);
     box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.7);
 }
 
 .info-extra{
-    color: #F3E4C9;
+    color: #ABD2FA;
     font-size: 0.9rem;
     line-height: 1.5;
     text-align: center;
@@ -159,7 +172,7 @@ section {
 
 .caja-habilidad h3{
     text-align: center;
-    color:#8B5E3C;
+    color:#1B2CC1;
     margin-top: 0;
     margin-bottom: 20px;
 }
@@ -175,8 +188,8 @@ section {
 }
 
 .lista-tags li{
-    background-color: #F3E4C9;
-    color: #0A2947;
+    background-color: #ABD2FA;
+    color: #091540;
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -207,10 +220,10 @@ section {
 
 .columna-anio h3{
     text-align: center;
-    color:#8B5E3C;
+    color:#1B2CC1;
     font-size: 1.5rem;
     margin-bottom: 20px;
-    border-bottom: 2px solid #8B5E3C;
+    border-bottom: 2px solid #1B2CC1;
     padding-bottom: 10px;
 }
 
@@ -224,8 +237,8 @@ section {
 }
 
 .materia-item{
-    background-color: #0A2947;
-    border: 2px solid #8B5E3C;
+    background-color: #091540;
+    border: 2px solid #1B2CC1;
     border-radius: 30px;
     padding: 15px 10px;
     text-align: center;
@@ -240,7 +253,7 @@ section {
 
 .materia-nombre {
     display: block;
-    color: #F3E4C9;
+    color: #ABD2FA;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -299,14 +312,14 @@ section {
 }
 
 .tarjeta-info-proyecto h3{
-    color: #8B5E3C;
+    color: #1B2CC1;
     font-size: 1.8rem;
     margin-top: 0;
     margin-bottom: 15px;
 }
 
 .tarjeta-info-proyecto p{
-    color: #F3E4C9;
+    color: #ABD2FA;
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -330,7 +343,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: opacity 0.4s ease;
 }
 
@@ -371,41 +384,41 @@ section {
 .contacto-cta p {
     margin-bottom: 30px;
     font-size: 1.1rem;
-    color: #F3E4C9;
+    color: #ABD2FA;
 }
 
 .btn-estilo-menu{
     background-color: transparent;
-    color: #F3E4C9;
+    color: #ABD2FA;
     padding: 12px 30px;
-    border: 2px solid #8B5E3C;
+    border: 2px solid #1B2CC1;
     border-radius: 20px;
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    /*transition: all 0.3s ease;*/
     font-family: inherit;
 }
 
-.btn-estilo-menu:hover{
-    background-color: #8B5E3C;
-    color: #0A2947;
+/*.btn-estilo-menu:hover{
+    background-color: #1B2CC1;
+    color: #091540;
     transform: translateY(-4px);
 }
 
 .btn-estilo-menu:active{
     transform: translateY(2px);
-}
+}*/
 
 .body-contacto{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #0A2947;
+    background-color: #091540;
     padding: 20px;
     margin: 0;
-    color: #F3E4C9;
+    color: #ABD2FA;
 }
 
 .modal-contenido{
@@ -415,9 +428,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0A2947;
+    background-color: #091540;
     padding: 40px;
-    border: 1px solid #8B5E3C;
+    border: 1px solid #1B2CC1;
     border-radius: 15px;
     box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.5);
 }
@@ -433,7 +446,7 @@ section {
 .btn-icono{
     background: none;
     border: none;
-    color: #8B5E3C;
+    color: #1B2CC1;
     font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -448,7 +461,7 @@ section {
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #8B5E3C;
+    border: 2px solid #1B2CC1;
     margin-bottom: 15px;
 }
 
@@ -456,14 +469,14 @@ section {
     margin: 0;
     font-size: 2rem;
     text-align: center;
-    color: #F3E4C9;
+    color: #ABD2FA;
 }
 
 .subtitulo-modal{
     margin-top: 5px;
     margin-bottom: 30px;
     font-size: 1.1rem;
-    color: #8B5E3C;
+    color: #1B2CC1;
 }
 
 .formulario-contacto{
@@ -489,10 +502,10 @@ section {
 .formulario-contacto select,
 .formulario-contacto textarea{
     background-color: transparent;
-    border: 1px solid #8B5E3C;
+    border: 1px solid #1B2CC1;
     border-radius: 8px;
     padding-inline: 12px;
-    color: #F3E4C9;
+    color: #ABD2FA;
     font-family: inherit;
     outline: none;
     transition: border-color 0.3s ease;
@@ -501,7 +514,7 @@ section {
 .formulario-contacto input:focus,
 .formulario-contacto select:focus,
 .formulario-contacto textarea:focus {
-    border-color: #F3E4C9;
+    border-color: #ABD2FA;
 }
 
 .radios-medio .opciones-radio, .checkbox-novedades{
@@ -519,8 +532,8 @@ section {
 }
 
 .formulario-contacto select option{
-    background-color: #0A2947;
-    color: #F3E4C9;
+    background-color: #091540;
+    color: #ABD2FA;
 }
 
 @media (max-width: 768px) {
@@ -542,13 +555,13 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    border-top: 1px solid #8B5E3C;
+    border-top: 1px solid #1B2CC1;
 }
 
 .pie-pagina p {
     margin: 0;
     font-size: 0.95rem;
-    color: #F3E4C9;
+    color: #ABD2FA;
 }
 
 .redes-sociales{
@@ -557,23 +570,24 @@ section {
 }
 
 .icono-red{
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
+    width: 45px;
     height: 45px;
     background-color: transparent;
-    color: #F3E4C9;
-    border: 2px solid #8B5E3C;
+    color: #ABD2FA;
+    border: 2px solid #1B2CC1;
     border-radius: 50%;
     text-decoration: none;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    /*transition: all 0.3s ease;*/
 }
 
-.icono-red:hover{
-    background-color: #8B5E3C;
-    color: #0A2947;
+/*.icono-red:hover{
+    background-color: #1B2CC1;
+    color: #091540;
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
@@ -581,4 +595,24 @@ section {
 .icono-red:active{
     transform: translateY(2px) scale(0.95);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
+}*/
+
+.btn-animado {
+    transition: all 0.3s ease;
+}
+
+.btn-animado:hover {
+    background-color: #1B2CC1;
+    color: #091540;
+    transform: translateY(-4px);
+}
+
+.btn-animado:active {
+    transform: translateY(2px);
+}
+
+section:not(:last-of-type) {
+    border-bottom: 25px solid #1B2CC1;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
