@@ -336,6 +336,11 @@ section {
     color: #ABD2FA;
 }
 
+.btn-contact{
+    text-decoration: none;
+     display: inline-block;
+}
+
 .btn-estilo-menu{
     background-color: transparent;
     color: #ABD2FA;
